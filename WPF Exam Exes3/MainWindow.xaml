@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPF_Exam_Exes3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Exam_Exes3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="489*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="InsertURL" HorizontalAlignment="Left" Height="23" Margin="68,79,0,0" TextWrapping="Wrap" Text="{Binding NewUrl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="244" BorderBrush="Black"/>
+        <Button Content="By Async Await" FontSize="12" Command="{Binding StartCommand}" HorizontalAlignment="Left" Margin="13,217,0,0" VerticalAlignment="Top" Width="135"/>
+        <Button x:Name="ByDispatcher" Content="By Dispatcher" FontSize="12" HorizontalAlignment="Left" Margin="13,270,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click"/>
+        <TextBlock x:Name="ShowMeSize" HorizontalAlignment="Left" Margin="83,129,0,0" Width="149" TextWrapping="Wrap" Text="{Binding NewURLSize, Mode=TwoWay}" VerticalAlignment="Top" TextAlignment="Center"/>
+        <TextBlock x:Name="ShowMeTime" HorizontalAlignment="Left" Margin="82,173,0,0" TextWrapping="Wrap" Text="{Binding loadingTime}" Width="147" VerticalAlignment="Top" TextAlignment="Center"/>
+        <Label Content="URL:" HorizontalAlignment="Left" Margin="14,77,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Size:" HorizontalAlignment="Left" Margin="14,124,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Margin="14,166,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
